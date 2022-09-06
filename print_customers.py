@@ -23,7 +23,3 @@ for record in csvfile:
          'Country:    ', Country + '\n',
          'Phone Num:  ', Phone + '\n')
     
-
-
-
-
