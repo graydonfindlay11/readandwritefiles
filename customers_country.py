@@ -1,31 +1,21 @@
 import csv
 
 infile = open('customers.csv', 'r')
+outfile = open("customers_country.csv",'w')
 
 csvfile = csv.reader(infile, delimiter= ',' )
 
 next (csvfile)
 
-print()
-print('FULL NAME, COUNTRY')
-print('------------------')
-print()
-i = 0
+outfile.write("Full Name, Country\n")
+
 for record in csvfile:
+    full_name = record [1] + " " + record[2]
+    country = record[4]
 
-    ID = record[0]
-    Fname = record[1]
-    Lname = record[2]
-    City = record[3]
-    Country = record[4]
-    Phone = record[5]
+    outfile.write(full_name + ',' + country + '\n')
 
-
-    print(Fname + ' ' + Lname, end='')
-    print(', '+ Country + '\n')
-    i += 1
-print("Number of Customers: ", i)
-print()
+outfile.close()
 
 
 
