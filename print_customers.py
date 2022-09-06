@@ -22,4 +22,5 @@ for record in csvfile:
          'City:       ', City + '\n',
          'Country:    ', Country + '\n',
          'Phone Num:  ', Phone + '\n')
-    
+    enter = input()
+
